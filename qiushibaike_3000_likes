@@ -18,5 +18,6 @@ while pageindex <= totalpages:
             if int(item[2]) > 3000:
                 content = re.sub(r"<br/>", "\n", item[0])
                 contents = re.sub(r"&#39;", "", content)
-                print(contents, item[2])
+                cont = re.sub(r"&quot;", "", contents)
+                print(cont, item[2])
     pageindex += 1            	
